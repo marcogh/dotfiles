@@ -8,3 +8,4 @@ filetype plugin on     " enables filetype specific plugins
 set laststatus=2
 set encoding=utf-8
 colorscheme elflord
+au! FileType python setl nosmartindent
