@@ -1,0 +1,124 @@
+ignore *
+unignore from subject to cc date
+unignore organization organisation x-mailer: x-newsreader: x-mailing-list: X-Mailer;
+unignore posted-to: X-Spam-Level:
+
+unhdr_order *
+hdr_order From From: To: Cc: Subject: Date: X-Spam-Level:
+
+set mbox_type=Maildir
+
+mailboxes =inbox \
+	=studiosynthesis \
+    =mioquartiere \
+	=webdebs \
+    =djangoday \
+    =arduinoday \
+	=debian-italian \
+	=ebay \
+	=universita \
+	=django-users \
+	=turboden \
+	=hackmeeting \
+	=Debian-security-announce \
+	=circo \
+	=spazio \
+	=cialtroni \
+	=bsf \
+	=pace \
+	=facebook \
+	=lug-eventi \
+	=lugbs \
+	=gardalug \
+	=lug-attivisti \
+	=lugob \
+	=ils-soci \
+	=brescia \
+	=debian-security \
+	=help
+
+set editor = "vim -S ~/.mutt/vimrc"
+
+#auto_view text/html
+
+#set nomark_old
+set record="=sent"
+
+#set ascii_chars
+set pager_stop
+set index_format="%3C %Z %[!%b%d] %-17.17F(%?M?#%3M&%4c?) %s"
+set reply_regexp="^(re([\[0-9\]+])*|aw|r):[ \t]*"
+set pager_index_lines=6
+set mime_forward=ask-no
+set forward_decode=yes
+set mime_forward_decode=no
+set metoo
+set strict_threads
+set sort_aux=last-date-received
+
+source ~/.aliases
+set alias_file=~/.aliases
+#set signature='fortune bofh-excuses|'
+#set signature=~/.signature
+
+set collapse_unread=yes
+set uncollapse_jump=yes
+#folder-hook . "push <collapse-all>"
+
+set print_command="a2ps -B |lpr"
+
+#hook sul from
+send-hook . my_hdr From: marco ghidinelli <marcogh@linux.it>
+send-hook '~t ^.*@turboden\.net' my_hdr From: marco ghidinelli <marco.ghidinelli@turboden.net>
+send-hook '~t ^.*@turboden\.it' my_hdr From: marco ghidinelli <marco.ghidinelli@turboden.net>
+send-hook '~t ^.*@atsweb\.info' my_hdr From: marco ghidinelli <marcogh@gmail.com>
+
+send-hook '~t ^.*@googlegroups.com' my_hdr From: marco ghidinelli <marcogh@gmail.com>
+send-hook '~t ^.*@lists\.debian\.org' my_hdr From: marcogh <marcogh@gmail.com>
+send-hook '~t ^.*@creberg\.it' my_hdr From: marcogh <marcogh@gmail.com>
+send-hook '~t ^.*@geolab\.bs\.it' my_hdr From: marcogh <marcogh@gmail.com>
+
+send-hook '~t ^.*@colman\.biz' my_hdr From: marco ghidinelli <marcogh@gmail.com>
+send-hook '~t ^.*@colman\.it' my_hdr From: marco ghidinelli <marcogh@gmail.com>
+send-hook '~t ^.*@colman\.eu' my_hdr From: marco ghidinelli <marcogh@gmail.com>
+
+send-hook '~t ^.*@tin\.it' my_hdr From: marco ghidinelli <marcogh@gmail.com>
+send-hook '~t ^.*@virgilio\.it' my_hdr From: marco ghidinelli <marcogh@gmail.com>
+
+send-hook '~t ^.*@hotelplan\.it' my_hdr From: Marco Ghidinelli <m.ghidinelli@studiosynthesis.biz>
+send-hook '~t ^.*@studiosynthesis\.biz' my_hdr From: Marco Ghidinelli <m.ghidinelli@studiosynthesis.biz>
+send-hook '~t ^.*@\.openconsul\.com' my_hdr From: Marco Ghidinelli <m.ghidinelli@studiosynthesis.biz>
+send-hook '~t ^.*@lists\.openconsul\.com' my_hdr From: Marco Ghidinelli <m.ghidinelli@studiosynthesis.biz>
+
+color normal    white default
+color attachment yellow default
+color hdrdefault cyan default
+color indicator white cyan
+#color indicator black yellow
+color markers   brightred default
+color quoted    green default
+color signature cyan default
+color status    brightgreen blue
+color tilde     blue default
+color tree      red default
+
+color header   cyan default .*
+color header   green default ^From:
+color header   yellow default ^To:
+color header   cyan default ^Reply-To:
+color header   cyan default ^Cc:
+color header   brightblue default ^Subject:
+color header   brightred default  ^X-Spam-Level:
+color header   brightred default  ^X-Spam-Status:
+color body     brightred default [\-\.+_a-zA-Z0-9]+@[\-\.a-zA-Z0-9]+
+color body     brightblue default (http|ftp)://[\-\.\,/%~_:?\#a-zA-Z0-9]+
+
+#color header   green black ^From:
+#color header   yellow black ^To:
+#color header   cyan black ^Reply-To:
+#color header   cyan black ^Cc:
+#color header   brightred black ^X-Spam-Level:
+#color header   brightred black ^X-Spam-Status:
+#color header   brightblue black ^Subject:
+#color body     brightred black [\-\.+_a-zA-Z0-9]+@[\-\.a-zA-Z0-9]+
+#color body     brightblue black (http|ftp|https)://[\-\.\,/%~_:?\#a-zA-Z0-9]+
