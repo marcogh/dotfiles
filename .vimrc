@@ -14,6 +14,8 @@ Plugin 'tpope/vim-fugitive'
 "Plugin 'zefei/cake16'
 "Plugin 'bling/vim-airline'
 Plugin 'rstacruz/sparkup'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 " run vim +PluginInstall +qall
 " or :PluginInstall
