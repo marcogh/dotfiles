@@ -1,4 +1,4 @@
-set guifont=Ubuntu\ mono\ 11
+set guifont=Ubuntu\ mono\ 8
 " set guifont=Bitstream\ Vera\ Sans\ Mono\ 8
 " set guifont=Hack\ 8 
 colorscheme desert
