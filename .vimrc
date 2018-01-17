@@ -39,6 +39,6 @@ set hlsearch
 set laststatus=2
 set encoding=utf-8
 colorscheme elflord
-set cc=80
+set cc=100
 " au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 au! FileType python setl nosmartindent
