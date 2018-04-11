@@ -7,13 +7,13 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 " syntax plugin
 Plugin 'nvie/vim-flake8'
-"Plugin 'scrooloose/syntastic'
+" Plugin 'scrooloose/syntastic'
 Plugin 'pyflakes/pyflakes'
 Plugin 'w0rp/ale'
 
 Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-fugitive'
-"Plugin 'zefei/cake16'
+" Plugin 'zefei/cake16'
 Plugin 'rstacruz/sparkup'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -35,17 +35,19 @@ set shiftwidth=4
 " set textwidth=79
 set expandtab
 set hlsearch
+set noincsearch
 " filetype on           " enables filetype detection
 " filetype plugin on    " enables filetype specific plugins
 set laststatus=2
 set encoding=utf-8
 colorscheme elflord
-set cc=80
+set cc=100
 " set cursorline        " highlight the current line
 " au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 au! FileType python setl nosmartindent
 set foldmethod=indent
-set nofoldenable
+"set nofoldenable
+set mouse=a
 
 if has("gui_running")
     set guifont=Ubuntu\ mono\ 8
