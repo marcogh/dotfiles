@@ -42,7 +42,6 @@ set laststatus=2
 set encoding=utf-8
 colorscheme elflord
 set cc=100
-" set cursorline        " highlight the current line
 " au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 au! FileType python setl nosmartindent
 set foldmethod=indent
